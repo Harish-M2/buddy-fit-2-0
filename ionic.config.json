@@ -1,0 +1,8 @@
+{
+  "name": "BuddyFit-2.0",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "6aa71e72"
+}
