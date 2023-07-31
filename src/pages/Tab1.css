@@ -1,0 +1,6 @@
+/* Tab1.css */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the spacing between buttons as needed */
+}
