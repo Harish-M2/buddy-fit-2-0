@@ -15,7 +15,7 @@ interface City {
 
 const Form: React.FC = () => {
     const toast = useRef<Toast | null>(null);
-    const [selectedSports, setSelectedCities] = useState<City[]>([]);
+    const [selectedSports, setSelectedSports] = useState<City[]>([]);
     const cities: City[] = [
         { name: 'Football', code: 'NY' },
         { name: 'Tennis', code: 'RM' },
@@ -27,22 +27,37 @@ const Form: React.FC = () => {
     const show = () => {
         const itemArray = selectedSports.map((city, i) => city.name + (i < selectedSports.length - 1 ? ', ' : ''));
 
-        toast.current?.show({ severity: 'success', summary: 'Form Submitted', detail: itemArray });
+        toast.current?.show({ severity: 'success', summary: 'Form Submitted', detail: itemArray.join(', ') });
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Check if there are no selected sports, and if so, prevent form submission.
+        if (selectedSports.length === 0) {
+            toast.current?.show({
+                severity: 'error',
+                summary: 'Error',
+                detail: 'Please select at least one sport.',
+            });
+            return;
+        }
+
+        // If there are selected sports, proceed with form submission and show success message.
         show();
+
+        // Reset the form after submission.
+        e.currentTarget.reset();
     };
 
     const handleMultiSelectChange = (e: MultiSelectChangeEvent) => {
-        setSelectedCities(e.value);
+        setSelectedSports(e.value);
     };
 
     const isFormFieldInvalid = (name: string) => !selectedSports.length;
 
     const getFormErrorMessage = (name: string) => {
-        return isFormFieldInvalid(name) ? <small className="p-error">City.</small> : <small className="p-error">&nbsp;</small>;
+        return isFormFieldInvalid(name) ? <small className="p-error">Please select at least one sport.</small> : <small className="p-error">&nbsp;</small>;
     };
 
     return (

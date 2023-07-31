@@ -46,6 +46,24 @@ const Tab2: React.FC = () => {
             <IonCardContent>Our purpose-built, all-weather football clubs feature the very latest ProTurf synthetic grass all with individual floodlit arenas.
                 After your game, relive that perfect 1-2 or nutmeg in our state-of-the-art sports lounges with BT Sport on the big screen and free Wi-Fi.</IonCardContent>
         </IonCard>
+        <IonCard>
+            <img alt="example1" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <IonCardHeader>
+                <IonCardTitle>Goals</IonCardTitle>
+                <IonCardSubtitle> Osterley</IonCardSubtitle>
+            </IonCardHeader>
+            <IonCardContent>Our purpose-built, all-weather football clubs feature the very latest ProTurf synthetic grass all with individual floodlit arenas.
+                After your game, relive that perfect 1-2 or nutmeg in our state-of-the-art sports lounges with BT Sport on the big screen and free Wi-Fi.</IonCardContent>
+        </IonCard>
+        <IonCard>
+            <img alt="example1" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <IonCardHeader>
+                <IonCardTitle>Goals</IonCardTitle>
+                <IonCardSubtitle> Osterley</IonCardSubtitle>
+            </IonCardHeader>
+            <IonCardContent>Our purpose-built, all-weather football clubs feature the very latest ProTurf synthetic grass all with individual floodlit arenas.
+                After your game, relive that perfect 1-2 or nutmeg in our state-of-the-art sports lounges with BT Sport on the big screen and free Wi-Fi.</IonCardContent>
+        </IonCard>
     </IonPage>
   );
 };
