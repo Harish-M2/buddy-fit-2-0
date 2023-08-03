@@ -73,7 +73,7 @@ const Form: React.FC = () => {
                     optionLabel="name"
                     placeholder="Select Sports"
                     maxSelectedLabels={3}
-                    className="w-full md:w-20rem"
+                    className="w-full md:w-40rem"
                 />
                 {getFormErrorMessage('item')}
                 <Button type="submit" label="Submit" className="mt-2" />
