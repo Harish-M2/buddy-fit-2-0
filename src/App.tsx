@@ -15,7 +15,7 @@ import { ellipse, home, square } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
-import FormikDoc from './pages/form';
+import FormikDoc from './pages/Form';
 import { DarkModeProvider, useDarkMode } from './pages/DarkModeContext';
 
 import '@ionic/react/css/core.css';
