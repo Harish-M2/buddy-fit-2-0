@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-buddyfit-dev-145422-authRole",
+      "UnauthRoleArn": "arn:aws:iam::097074697117:role/amplify-buddyfit-dev-145422-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::097074697117:role/amplify-buddyfit-dev-145422-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-buddyfit-dev-145422-deployment",
+      "UnauthRoleName": "amplify-buddyfit-dev-145422-unauthRole",
+      "StackName": "amplify-buddyfit-dev-145422",
+      "StackId": "arn:aws:cloudformation:us-west-2:097074697117:stack/amplify-buddyfit-dev-145422/b34fe830-6386-11ee-adf5-062c92bb8985",
+      "AmplifyAppId": "d1k86b1czjtfph"
+    },
+    "categories": {
+      "function": {
+        "buddyfitb72bb83d": {
+          "deploymentBucketName": "amplify-buddyfit-dev-145422-deployment",
+          "s3Key": "amplify-builds/buddyfitb72bb83d-48783573797554613279-build.zip"
+        }
+      },
+      "api": {
+        "api36cd6afe": {}
+      }
+    }
+  }
+}

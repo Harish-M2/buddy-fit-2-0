@@ -1,0 +1,43 @@
+{
+  "api": {
+    "api36cd6afe": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "buddyfitb72bb83d"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "buddyfitb72bb83d": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_buddyfitb72bb83d_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buddyfitb72bb83d"
+        }
+      ]
+    },
+    "AMPLIFY_function_buddyfitb72bb83d_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buddyfitb72bb83d"
+        }
+      ]
+    }
+  }
+}

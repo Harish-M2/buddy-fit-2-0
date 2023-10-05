@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { MultiSelect, MultiSelectChangeEvent } from 'primereact/multiselect';
 import { Toast } from 'primereact/toast';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { Button } from 'primereact/button';
 import './Form.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
@@ -9,8 +9,6 @@ import 'primereact/resources/primereact.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import { useDarkMode } from "./DarkModeContext";
-
-// Rest of the code...
 
 interface City {
     name: string;
@@ -47,8 +45,8 @@ const Form: React.FC = () => {
 
         show();
 
-        const form = e.target as HTMLFormElement;
-        form.reset();
+        // Reset the form
+        setSelectedSports([]);
     };
 
     const handleMultiSelectChange = (e: MultiSelectChangeEvent) => {
@@ -70,26 +68,24 @@ const Form: React.FC = () => {
                         <IonTitle size="large">Sports</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <IonForm>
-                    <div className="card flex justify-content-center">
-                        <form onSubmit={handleSubmit} className="flex flex-column align-items-center gap-2">
-                            <Toast ref={toast} />
-                            <MultiSelect
-                                id="item"
-                                name="item"
-                                options={cities}
-                                value={selectedSports}
-                                onChange={handleMultiSelectChange}
-                                optionLabel="name"
-                                placeholder="Select Sports"
-                                maxSelectedLabels={3}
-                                className="w-full md:w-40rem"
-                            />
-                            {selectedSports.length === 0 && <small className="p-error">Please select at least one sport.</small>}
-                            <Button type="submit" label="Submit" className="mt-2" />
-                        </form>
-                    </div>
-                </IonForm>
+                <div className="card flex justify-content-center">
+                    <form onSubmit={handleSubmit} className="flex flex-column align-items-center gap-2">
+                        <Toast ref={toast} />
+                        <MultiSelect
+                            id="item"
+                            name="item"
+                            options={cities}
+                            value={selectedSports}
+                            onChange={handleMultiSelectChange}
+                            optionLabel="name"
+                            placeholder="Select Sports"
+                            maxSelectedLabels={3}
+                            className="w-full md:w-40rem"
+                        />
+                        {selectedSports.length === 0 && <small className="p-error">Please select at least one sport.</small>}
+                        <Button type="submit" label="Submit" className="mt-2" />
+                    </form>
+                </div>
             </IonContent>
         </IonPage>
     );
